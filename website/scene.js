@@ -2,13 +2,13 @@
  * Setting the Scene
  */
 
-var WIDTH = 400, HEIGHT = 300;
+var WIDTH = window.innerWidth, HEIGHT = window.innerHeight;
 
 // camera
 var VIEW_ANGLE = 45,
     ASPECT = WIDTH / HEIGHT,
-    NEAR = 0.1,
-    FAR = 10000;
+    NEAR = 1,
+    FAR = 5000;
 
 // DOM
 var $container = $('#container');

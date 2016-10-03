@@ -29,17 +29,27 @@ function initParticle( particle, delay ){
 
     particle.position.set( 0, 0, 0 );
     particle.scale.x = particle.scale.y = Math.random() * 32 + 16;
+
+    // tweens
+
+    new TWEEN.Tween(particle).delay(delay).to({}, 10000).onComplete(initParticle).start();
+
+    new TWEEN.Tween(particle.position).delay(delay).to({x: Math.random() * 4000 - 2000, y: Math.random() * 1000 - 500, z: Math.random() * 4000 - 2000}, 10000 ).start();
+
+    new TWEEN.Tween(particle.scale).delay( delay ).to({x: 0.01, y: 0.01 }, 10000).start();
+
 }
 
 
-
+// DOM
+var $container = $('#container');
 
 
 /**
  * Setting the Scene
  */
 
-var WIDTH = 400, HEIGHT = 300;
+var WIDTH = window.innerWidth, HEIGHT = window.innerHeight;
 
 // camera
 var VIEW_ANGLE = 45,
@@ -47,8 +57,7 @@ var VIEW_ANGLE = 45,
     NEAR = 0.1,
     FAR = 10000;
 
-// DOM
-var $container = $('#container');
+
 
 // webGL
 var renderer = new THREE.WebGLRenderer();
@@ -63,7 +72,7 @@ var scene = new THREE.Scene();
 
 scene.add(camera);
 
-camera.position.z = 300;
+camera.position.z = 1000;
 
 renderer.setSize(WIDTH, HEIGHT);
 
@@ -99,10 +108,30 @@ for( var i = 0; i < 1000; i++ ){
 }
 
 
+
+
+
 /**
  * Rendering
  */
+function render(){
+    TWEEN.update();
 
-renderer.render(scene, camera);
+
+    renderer.render(scene, camera);
+}
+
+
+
+function animate(){
+    requestAnimationFrame(animate);
+    render();
+    
+};
+animate();
+
+
+
+
 
 

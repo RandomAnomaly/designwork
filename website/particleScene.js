@@ -1,3 +1,5 @@
+
+
 /**
  * Helper methods
  */
@@ -76,7 +78,11 @@ camera.position.z = 1000;
 
 renderer.setSize(WIDTH, HEIGHT);
 
-$container.append(renderer.domElement);
+effect = new THREE.AsciiEffect(renderer);
+effect.setSize( WIDTH, HEIGHT );
+$container.append(effect.domElement);
+
+// $container.append(renderer.domElement);
 
 
 /**
@@ -118,7 +124,8 @@ function render(){
     TWEEN.update();
 
 
-    renderer.render(scene, camera);
+    // renderer.render(scene, camera);
+    effect.render(scene,camera);
 }
 
 

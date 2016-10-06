@@ -262,7 +262,7 @@ THREE.AsciiEffect = function ( renderer, charSet, options ) {
 				} else {
 
 					strChars += strThisChar;
-
+					
 				}
 
 			}

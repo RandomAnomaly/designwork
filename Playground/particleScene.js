@@ -78,11 +78,12 @@ camera.position.z = 1000;
 
 renderer.setSize(WIDTH, HEIGHT);
 
-effect = new THREE.AsciiEffect(renderer);
+effect = new THREE.AsciiEffect(renderer, null, {'invert': true, 'resolution': 0.15});
 effect.setSize( WIDTH, HEIGHT );
+
 $container.append(effect.domElement);
 
-// $container.append(renderer.domElement);
+$container.append(renderer.domElement);
 
 
 /**

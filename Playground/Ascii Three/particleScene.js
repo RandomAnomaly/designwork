@@ -83,7 +83,7 @@ effect.setSize( WIDTH, HEIGHT );
 
 $container.append(effect.domElement);
 
-$container.append(renderer.domElement);
+// $container.append(renderer.domElement);
 
 
 /**

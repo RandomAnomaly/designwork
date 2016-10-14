@@ -133,9 +133,8 @@ function render(){
 
 function animate(){
     requestAnimationFrame(animate);
-    render();
-    
-};
+    render();   
+}
 animate();
 
 

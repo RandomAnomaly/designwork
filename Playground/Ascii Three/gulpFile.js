@@ -19,17 +19,7 @@ gulp.task('clean', function () {
 });
 
 //usemin
-gulp.task('usemin', function() {
-    return gulp.src('src/**/*.html')
-    .pipe(usemin({
-        css: [rev()],
-        js: [uglify(),rev()]
-    }))
-    .pipe(gulp.dest('dist/'));
-});
-
-
-gulp.task('usemin2', ['clean','jshint'], function(){
+gulp.task('usemin', ['clean','jshint'], function(){
     return gulp.src('src/index.html')
     .pipe(usemin({
         css: [rev()],

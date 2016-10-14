@@ -2,39 +2,40 @@
 <html>
 
 <head>
-    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="scanlines.css">
-    <style>
-        body {
-            background-color: #000000;
-            margin: 0px;
-            overflow: hidden;
-            color: lightgreen;
-            text-shadow: 0 0 8px lightgreen;
-        }
-    </style>
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+	<!-- build:css styles/styles.css -->
+	<link rel="stylesheet" href="scanlines.css">
+	<link rel="stylesheet" href="styles.css">
+	<!-- endbuild -->
+	
+	
 </head>
 
 <body>
-    <div class="container-fluid">
-        <div id="container" class="col-xs-8">
-        </div>
-    </div>
-    <script src="http://code.jquery.com/jquery-3.1.1.min.js"></script>
-    <!-- build:js scripts/custom-three.js -->
-    <script src="three.js"></script>
-    <script src="AsciiEffect.js"></script>
-    <script src="tween.min.js"></script>
-    <script src="Projector.js"></script>
-    <script src="CanvasRenderer.js"></script>
-    <!-- endbuild -->
+	<div class="container-fluid">
+		<div id="container" class="col-xs-8">
+		</div>
+	</div>
+	<script src="http://code.jquery.com/jquery-3.1.1.min.js"></script>
+	<!-- build:js scripts/custom-three.js -->
+	<script src="three.js"></script>
+	<script src="AsciiEffect.js"></script>
+	<script src="tween.min.js"></script>
+	<script src="Projector.js"></script>
+	<script src="CanvasRenderer.js"></script>
+	<script src="particleScene.js"></script>
+	<!-- endbuild -->
 
-<div class="overlay">
-        </div>
-<!-- TODO: draw a box -->
-<!-- TODO: add the glitch effect! -->
-    <!--<script src="scene.js"></script>-->
-    <script src="particleScene.js"></script>
+	<div class="overlay">
+	</div>
+	<!-- TODO: draw a box -->
+	<!-- TODO: add the glitch effect! -->
+
+
+	
+	
+	
 </body>
 
 </html>
